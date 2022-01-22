@@ -1,0 +1,87 @@
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #a09fa413;
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #acacac;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  border: 2px solid #0d6efd;
+}
+.checkbox::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #0d6dfd;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+/*--------*/
+
+.listItems {
+  padding: 0 10px;
+}
+
+.listItems li {
+  list-style: none;
+  display: flex;
+
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+.listItems li p {
+  color: #767579;
+  font-size: 18px;
+}
+.listControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.listControls button {
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #a09fa4;
+}
+.listItems li .deleteItem {
+  opacity: 0;
+  transition: 0.2s;
+  transform: scale(0.8);
+}
+.listItems li:hover .deleteItem {
+  opacity: 1;
+}
+.deleteItem:hover {
+  color: rgb(240, 92, 92);
+}
+.strikedText {
+  text-decoration: line-through;
+}
+.emptyState {
+  text-align: center;
+}

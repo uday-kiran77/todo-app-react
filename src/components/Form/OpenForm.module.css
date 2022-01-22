@@ -1,0 +1,15 @@
+.openForm {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 30px auto;
+  border: none;
+  outline: none;
+  color: #59595a;
+  transition: 0.2s;
+}
+.openForm:hover {
+  background-color: #fb3357;
+  color: #fff;
+}
